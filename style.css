@@ -1,1 +1,149 @@
-/* No CSS *//*# sourceMappingURL=style.css.map */
+* {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+html .title-parent, body .title-parent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+html .title-parent h1, body .title-parent h1 {
+  margin: 3em;
+  text-align: center;
+  border-bottom: 3px solid #005a80;
+}
+
+html main, body main {
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+html main .content, body main .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  width: 50vw;
+  padding: 3em;
+  border-radius: 1em;
+}
+
+html main .content .img-parent img, body main .content .img-parent img {
+  margin-bottom: 2em;
+  border-radius: 50%;
+  width: 20vw;
+  -webkit-box-shadow: 7px -7px 0 #005a80;
+          box-shadow: 7px -7px 0 #005a80;
+}
+
+html main .content .img-parent::before, body main .content .img-parent::before {
+  content: '"';
+  position: absolute;
+  text-align: center;
+  font-size: 5vw;
+  height: 1em;
+  width: 1em;
+  background-color: #005a80;
+  border-radius: 50% 50% 50% 50%;
+}
+
+html main .content h3, body main .content h3 {
+  margin: 0;
+}
+
+html main .content h4, body main .content h4 {
+  margin: 0;
+  color: #005a80;
+}
+
+html main .content p, body main .content p {
+  text-align: center;
+  width: 50vw;
+  color: #646464;
+}
+
+html main .content input, body main .content input {
+  margin: 1em;
+}
+
+html main .content #surprise, body main .content #surprise {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0))), -webkit-gradient(linear, left top, left bottom, from(#00b3ff), to(#005a80));
+  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), linear-gradient(#00b3ff, #005a80);
+  padding: 0.5em 1em;
+  border-radius: 50em;
+  background-clip: content-box, border-box;
+  background-origin: border-box;
+  border: 3px solid transparent;
+  -webkit-box-shadow: 1px 1000px 1px #fff inset;
+          box-shadow: 1px 1000px 1px #fff inset;
+  color: black;
+  -webkit-transition: all 0.25s;
+  transition: all 0.25s;
+}
+
+html main .content #surprise:hover, body main .content #surprise:hover {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  color: white;
+}
+
+html main .content #prv-rvw, body main .content #prv-rvw {
+  background-color: transparent;
+  color: #005a80;
+  font-size: 1.5em;
+  border: none;
+  border-radius: 50em;
+  -webkit-transition: all 0.25s;
+  transition: all 0.25s;
+}
+
+html main .content #prv-rvw:hover, body main .content #prv-rvw:hover {
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+}
+
+html main .content #nxt-rvw, body main .content #nxt-rvw {
+  background-color: transparent;
+  color: #005a80;
+  font-size: 1.5em;
+  border: none;
+  border-radius: 50em;
+  -webkit-transition: all 0.25s;
+  transition: all 0.25s;
+}
+
+html main .content #nxt-rvw:hover, body main .content #nxt-rvw:hover {
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+}
+/*# sourceMappingURL=style.css.map */
