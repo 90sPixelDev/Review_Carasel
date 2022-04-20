@@ -51,15 +51,15 @@ html main .content, body main .content {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  min-height: 300px;
+  padding-top: 3em;
   -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
           box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  width: 50vw;
-  padding: 3em;
+  width: 100%;
   border-radius: 1em;
 }
 
 html main .content .img-parent img, body main .content .img-parent img {
-  margin-bottom: 2em;
   border-radius: 50%;
   width: 20vw;
   -webkit-box-shadow: 7px -7px 0 #005a80;
@@ -90,6 +90,8 @@ html main .content p, body main .content p {
   text-align: center;
   width: 50vw;
   color: #646464;
+  height: 130px;
+  margin: 0 2em;
 }
 
 html main .content input, body main .content input {
@@ -99,6 +101,7 @@ html main .content input, body main .content input {
 html main .content #surprise, body main .content #surprise {
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0))), -webkit-gradient(linear, left top, left bottom, from(#00b3ff), to(#005a80));
   background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), linear-gradient(#00b3ff, #005a80);
+  margin-bottom: 3em;
   padding: 0.5em 1em;
   border-radius: 50em;
   background-clip: content-box, border-box;
