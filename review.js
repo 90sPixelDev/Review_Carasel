@@ -1,4 +1,7 @@
 
+// Variable to know which review is currently being viewed
+let currentRev = 0;
+
 // FUNCTION to generate a random set of letters and spaces to produce a lorem like effect in the fake review
 const genPara = () => {
     const letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k' ,'l', 'm' ,'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', ''];
@@ -18,10 +21,7 @@ const genPara = () => {
     return paragragh;
 }
 
-// Variable to know which review is currently being viewed
-let currentRev = 0;
-
-// Array of reviews on the side
+// Array of reviews on the side with each pice of info
 const reviews = [{
     name:   'Lien Font',
     job:    'Web Developer',
@@ -63,6 +63,19 @@ const reviews = [{
     img:    'portraits/pexels-jeff-denlea-2998528.jpg'
 }]
 
+// On loading the page immediately update the review
+window.addEventListener("DOMContentLoaded", () => updateReview());
+
+// Function to update the review info in DOM
+const updateReview = () => {
+    const review = reviews[currentRev];
+
+    document.querySelector('img').src = reviews[currentRev].img;
+    document.querySelector('h3').textContent = reviews[currentRev].name;
+    document.querySelector('h4').textContent = reviews[currentRev].job;
+    document.querySelector('p').textContent = genPara();
+}
+
 // Variables to easily target the buttons in the DOM
 const nextRvw = document.getElementById('nxt-rvw');
 const prvRev = document.getElementById('prv-rvw');
@@ -74,11 +87,8 @@ nextRvw.addEventListener('click', () => {
     //checking if the current count of reviews does not pass the reviews array
     currentRev < 6 ? currentRev++ : currentRev = 0;
 
-    // Updating all the DOM info
-    document.querySelector('img').src = reviews[currentRev].img;
-    document.querySelector('h3').textContent = reviews[currentRev].name;
-    document.querySelector('h4').textContent = reviews[currentRev].job;
-    document.querySelector('p').textContent = genPara();
+    // Running function to update review
+    updateReview();
 
     //Just to see in Console the information
     console.table(reviews[currentRev]);
@@ -87,10 +97,8 @@ nextRvw.addEventListener('click', () => {
 prvRev.addEventListener('click', () => {
     currentRev > 1 ? currentRev-- : currentRev = 6 ;
 
-    document.querySelector('img').src = reviews[currentRev].img;
-    document.querySelector('h3').textContent = reviews[currentRev].name;
-    document.querySelector('h4').textContent = reviews[currentRev].job;
-    document.querySelector('p').textContent = genPara();
+    // Running function to update review
+    updateReview();
 
     console.table(reviews[currentRev]);
 })
@@ -98,10 +106,8 @@ prvRev.addEventListener('click', () => {
 srpRev.addEventListener('click', () => {
     currentRev = Math.floor(Math.random() * 6);
 
-    document.querySelector('img').src = reviews[currentRev].img;
-    document.querySelector('h3').textContent = reviews[currentRev].name;
-    document.querySelector('h4').textContent = reviews[currentRev].job;
-    document.querySelector('p').textContent = genPara();
+    // Running function to update review
+    updateReview();
 
     console.table(reviews[currentRev]);
 })
