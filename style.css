@@ -40,7 +40,13 @@ html main, body main {
           align-items: center;
 }
 
-html main .content, body main .content {
+html main .container, body main .container {
+  padding-bottom: 10em;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+html main .container .content, body main .container .content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -52,21 +58,21 @@ html main .content, body main .content {
       -ms-flex-align: center;
           align-items: center;
   min-height: 300px;
+  width: 100%;
   padding-top: 3em;
   -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
           box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  width: 100%;
   border-radius: 1em;
 }
 
-html main .content .img-parent img, body main .content .img-parent img {
+html main .container .content .img-parent img, body main .container .content .img-parent img {
   border-radius: 50%;
   width: 20vw;
   -webkit-box-shadow: 7px -7px 0 #005a80;
           box-shadow: 7px -7px 0 #005a80;
 }
 
-html main .content .img-parent::before, body main .content .img-parent::before {
+html main .container .content .img-parent::before, body main .container .content .img-parent::before {
   content: '"';
   position: absolute;
   text-align: center;
@@ -77,16 +83,16 @@ html main .content .img-parent::before, body main .content .img-parent::before {
   border-radius: 50% 50% 50% 50%;
 }
 
-html main .content h3, body main .content h3 {
+html main .container .content h3, body main .container .content h3 {
   margin: 0;
 }
 
-html main .content h4, body main .content h4 {
+html main .container .content h4, body main .container .content h4 {
   margin: 0;
   color: #005a80;
 }
 
-html main .content p, body main .content p {
+html main .container .content p, body main .container .content p {
   text-align: center;
   width: 50vw;
   color: #646464;
@@ -94,11 +100,11 @@ html main .content p, body main .content p {
   margin: 0 2em;
 }
 
-html main .content input, body main .content input {
+html main .container .content input, body main .container .content input {
   margin: 1em;
 }
 
-html main .content #surprise, body main .content #surprise {
+html main .container .content #surprise, body main .container .content #surprise {
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0))), -webkit-gradient(linear, left top, left bottom, from(#00b3ff), to(#005a80));
   background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), linear-gradient(#00b3ff, #005a80);
   margin-bottom: 3em;
@@ -114,13 +120,13 @@ html main .content #surprise, body main .content #surprise {
   transition: all 0.25s;
 }
 
-html main .content #surprise:hover, body main .content #surprise:hover {
+html main .container .content #surprise:hover, body main .container .content #surprise:hover {
   -webkit-box-shadow: none;
           box-shadow: none;
   color: white;
 }
 
-html main .content #prv-rvw, body main .content #prv-rvw {
+html main .container .content #prv-rvw, body main .container .content #prv-rvw {
   background-color: transparent;
   color: #005a80;
   font-size: 1.5em;
@@ -130,12 +136,12 @@ html main .content #prv-rvw, body main .content #prv-rvw {
   transition: all 0.25s;
 }
 
-html main .content #prv-rvw:hover, body main .content #prv-rvw:hover {
+html main .container .content #prv-rvw:hover, body main .container .content #prv-rvw:hover {
   -webkit-transform: scale(1.5);
           transform: scale(1.5);
 }
 
-html main .content #nxt-rvw, body main .content #nxt-rvw {
+html main .container .content #nxt-rvw, body main .container .content #nxt-rvw {
   background-color: transparent;
   color: #005a80;
   font-size: 1.5em;
@@ -145,8 +151,47 @@ html main .content #nxt-rvw, body main .content #nxt-rvw {
   transition: all 0.25s;
 }
 
-html main .content #nxt-rvw:hover, body main .content #nxt-rvw:hover {
+html main .container .content #nxt-rvw:hover, body main .container .content #nxt-rvw:hover {
   -webkit-transform: scale(1.5);
           transform: scale(1.5);
+}
+
+html main .rotate-review, body main .rotate-review {
+  -webkit-transform: rotateY(360deg);
+          transform: rotateY(360deg);
+}
+
+@-webkit-keyframes rotateReview {
+  0% {
+    opacity: 0%;
+    -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
+  }
+  90% {
+    -webkit-transform: rotateY(360deg);
+            transform: rotateY(360deg);
+  }
+  100% {
+    opacity: 100%;
+    -webkit-transform: rotateY(360deg);
+            transform: rotateY(360deg);
+  }
+}
+
+@keyframes rotateReview {
+  0% {
+    opacity: 0%;
+    -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
+  }
+  90% {
+    -webkit-transform: rotateY(360deg);
+            transform: rotateY(360deg);
+  }
+  100% {
+    opacity: 100%;
+    -webkit-transform: rotateY(360deg);
+            transform: rotateY(360deg);
+  }
 }
 /*# sourceMappingURL=style.css.map */

@@ -76,14 +76,24 @@ const updateReview = () => {
     document.querySelector('p').textContent = genPara();
 }
 
+// const updateReviewAnim = () => {
+//     const con = document.getElementsByClassName('container');
+
+    
+// }
+
 // Variables to easily target the buttons in the DOM
 const nextRvw = document.getElementById('nxt-rvw');
 const prvRev = document.getElementById('prv-rvw');
 const srpRev = document.getElementById('surprise');
+const con = document.querySelector('.container');
 
 
 // Functions to manipulate the DOM with the updated info on button click
 nextRvw.addEventListener('click', () => {
+    // Add class that will play the animation
+    con.classList.toggle('rotate-review');
+
     //checking if the current count of reviews does not pass the reviews array
     currentRev < 6 ? currentRev++ : currentRev = 0;
 
@@ -95,6 +105,8 @@ nextRvw.addEventListener('click', () => {
     console.table(currentRev);
 })
 prvRev.addEventListener('click', () => {
+    // Add class that will play the animation
+    con.classList.toggle('rotate-review');
     currentRev > 1 ? currentRev-- : currentRev = 6 ;
 
     // Running function to update review
@@ -104,6 +116,8 @@ prvRev.addEventListener('click', () => {
 })
 
 srpRev.addEventListener('click', () => {
+    // Add class that will play the animation
+    con.classList.toggle('rotate-review');
     currentRev = Math.floor(Math.random() * 6);
 
     // Running function to update review
