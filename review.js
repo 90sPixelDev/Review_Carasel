@@ -86,13 +86,15 @@ const updateReview = () => {
 const nextRvw = document.getElementById('nxt-rvw');
 const prvRev = document.getElementById('prv-rvw');
 const srpRev = document.getElementById('surprise');
-const con = document.querySelector('.container');
+const containerRev = document.querySelector('.container');
+const contentRev = document.querySelector('.content');
 
 
 // Functions to manipulate the DOM with the updated info on button click
 nextRvw.addEventListener('click', () => {
     // Add class that will play the animation
-    con.classList.toggle('rotate-review');
+    containerRev.classList.toggle('rotate-container');
+    contentRev.classList.toggle('rotate-content');
 
     //checking if the current count of reviews does not pass the reviews array
     currentRev < 6 ? currentRev++ : currentRev = 0;
@@ -106,7 +108,9 @@ nextRvw.addEventListener('click', () => {
 })
 prvRev.addEventListener('click', () => {
     // Add class that will play the animation
-    con.classList.toggle('rotate-review');
+    containerRev.classList.toggle('rotate-container');
+    contentRev.classList.toggle('rotate-content');
+
     currentRev > 1 ? currentRev-- : currentRev = 6 ;
 
     // Running function to update review
@@ -117,7 +121,9 @@ prvRev.addEventListener('click', () => {
 
 srpRev.addEventListener('click', () => {
     // Add class that will play the animation
-    con.classList.toggle('rotate-review');
+    containerRev.classList.toggle('rotate-container');
+    contentRev.classList.toggle('rotate-content');
+    
     currentRev = Math.floor(Math.random() * 6);
 
     // Running function to update review

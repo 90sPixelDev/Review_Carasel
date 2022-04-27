@@ -132,9 +132,11 @@ html, body {
                 }
             }
         }
-        .rotate-review {
-            // animation: rotateReview 1s both;
-            transform: rotateY(360deg);
+        .rotate-container {
+            transform: rotateY(180deg);
+        }
+        .rotate-content {
+            transform: rotateY(180deg);
         }
         @keyframes rotateReview {
             0% {

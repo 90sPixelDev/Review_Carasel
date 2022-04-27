@@ -156,9 +156,14 @@ html main .container .content #nxt-rvw:hover, body main .container .content #nxt
           transform: scale(1.5);
 }
 
-html main .rotate-review, body main .rotate-review {
-  -webkit-transform: rotateY(360deg);
-          transform: rotateY(360deg);
+html main .rotate-container, body main .rotate-container {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+html main .rotate-content, body main .rotate-content {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
 }
 
 @-webkit-keyframes rotateReview {
